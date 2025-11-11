@@ -73,7 +73,7 @@ pip install -r requirements.txt
 
 ---
 
-All scripts to generate figures and CSVs are in the `/src` directory.  
+Code was ran on Windows from PowerShell. (sorry!) All scripts to generate figures and CSVs are in the `/src` directory.  
 Run the following to regenerate all results:
 
 ```bash
