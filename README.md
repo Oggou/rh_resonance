@@ -19,7 +19,7 @@ Using high-precision complex analysis, we find that the **critical line (σ = ½
 |χ(s)| = 1, where ζ(s) = χ(s)·ζ(1−s)
 
 This implies that the critical line is a **perfect resonance**—a balance between amplification and attenuation in the analytic structure of ζ(s).  
-The discovery is reinforced by a **geometric interpretation** using the imaginary base \( b = \tfrac{1}{2}i \), where ζ(s) exhibits complete alignment only along σ = ½.
+The discovery is reinforced by a **geometric interpretation** using the imaginary base \( b = 1/2i \), where ζ(s) exhibits complete alignment only along σ = ½.
 
 ---
 
