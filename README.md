@@ -16,9 +16,7 @@ This repository contains all analysis, figures, and scripts supporting the paper
 The project identifies a **resonance condition** intrinsic to the Riemann zeta function’s analytic continuation.  
 Using high-precision complex analysis, we find that the **critical line (σ = ½)** corresponds exactly to the condition:
 
-\[
-|\chi(s)| = 1, \quad \text{where } \zeta(s) = \chi(s)\zeta(1-s)
-\]
+|χ(s)| = 1, where ζ(s) = χ(s)·ζ(1−s)
 
 This implies that the critical line is a **perfect resonance**—a balance between amplification and attenuation in the analytic structure of ζ(s).  
 The discovery is reinforced by a **geometric interpretation** using the imaginary base \( b = \tfrac{1}{2}i \), where ζ(s) exhibits complete alignment only along σ = ½.
@@ -108,10 +106,10 @@ All computations use **mpmath** arbitrary precision (up to 800 digits).
 
 ## 📈 Core Results
 
-- The resonance condition  
-  \[
-  |\chi(s)| = 1 \iff \Re(s) = \tfrac{1}{2}
-  \]
+- The resonance condition
+- 
+|χ(s)| = 1 ⇔ Re(s) = 1/2
+
   holds numerically to machine precision.
 
 - The base-(½i) representation defines a **logarithmic spiral lattice**, rotating 90° and scaling by ½ per iteration. ζ(s) achieves alignment only along the critical line.
