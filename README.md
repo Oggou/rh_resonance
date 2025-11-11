@@ -106,8 +106,7 @@ All computations use **mpmath** arbitrary precision (up to 800 digits).
 
 ## 📈 Core Results
 
-- The resonance condition
-- 
+- The resonance condition 
 |χ(s)| = 1 ⇔ Re(s) = 1/2
 
   holds numerically to machine precision.
