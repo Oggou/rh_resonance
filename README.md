@@ -73,7 +73,7 @@ rh_resonance/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/<your-username>/rh_resonance.git
+git clone https://github.com/Oggou/rh_resonance.git
 cd rh_resonance
 
 # Create virtual environment (recommended)
