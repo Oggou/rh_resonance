@@ -1,145 +1,65 @@
-# RH Resonance
+# 🌀 Geometric and Frequency-Domain Resonance of the Riemann Zeta Function
 
-### A Frequency–Domain and Geometric Restatement of the Riemann Hypothesis  
 **Author:** James P. Chase  
-**2025**
+**Repository:** https://github.com/Oggou/rh_resonance  
+**Preprint:** [OSF DOI link](https://osf.io/39nsc/)
 
 ---
 
-## 🔍 Overview
+## 🧩 Abstract
+We introduce a geometric and frequency-domain framework in which the Riemann zeta function ζ(s) exhibits a reproducible resonance uniquely along the critical line Re(s) = 1/2.  
+By representing ζ(s) in a complex base b = (1/2)i, we define a “digit-expansion residual”—the remainder after expressing ζ(s) as a finite series in powers of b.
 
-This repository contains all analysis, figures, and scripts supporting the paper:
+Numerical evaluation across known nontrivial zeros reveals that this residual collapses by several orders of magnitude exactly at Re(s) = 1/2, and increases rapidly off the line.
 
-> **A Geometric and Frequency-Domain Restatement of the Riemann Hypothesis**  
-> _James P. Chase, 2025_
+---
 
-The project identifies a **resonance condition** intrinsic to the Riemann zeta function’s analytic continuation.  
-Using high-precision complex analysis, we find that the **critical line (σ = ½)** corresponds exactly to the condition:
+## ⚙️ Mathematical Framework
+The Riemann zeta function satisfies the functional equation:
 
 |χ(s)| = 1, where ζ(s) = χ(s)·ζ(1−s)
 
-This implies that the critical line is a **perfect resonance**—a balance between amplification and attenuation in the analytic structure of ζ(s).  
-The discovery is reinforced by a **geometric interpretation** using the imaginary base \( b = 1/2i \), where ζ(s) exhibits complete alignment only along σ = ½.
+and reaches unit modulus only along:
 
----
-
-## 🧠 Concept Summary
-
-| Region | Behavior | Interpretation |
-|--------|------------|----------------|
-| σ < ½ | \(|\chi(s)| > 1\) | Amplification (gain) |
-| σ = ½ | \(|\chi(s)| = 1\) | Perfect resonance (critical line) |
-| σ > ½ | \(|\chi(s)| < 1\) | Attenuation (loss) |
-
-This equilibrium mirrors **impedance matching** in electromagnetics: only at σ = ½ does the system achieve self-consistency.
-
----
-
-## 🧩 Repository Structure
-
-```
-rh_resonance/
-│
-├── src/
-│   ├── base_half_i_expansion.py          # Defines (½i)-base geometric expansion
-│   ├── chi_resonance_test.py             # Tests |χ(s)|=1 condition at σ=½
-│   ├── chi_resonance_sweep.py            # Sweeps χ(s) across σ, generates CSV
-│   ├── plot_chi_resonance.py             # Plots resonance crossing & surfaces
-│   ├── resonance_heatmap.py              # Optional residual visualization
-│   ├── resonance_heatmap_grid.py         # Legacy fine grid version
-│   ├── generate_all_figures.py           # Runs full figure generation pipeline
-│   └── zeta_base_half_i_expander.py      # Core continuous base-(½i) expansion
-│
-├── figures/
-│   ├── base_half_i_spiral.png
-│   ├── chi_magnitude_heatmap.png
-│   ├── chi_magnitude_resonance.png
-│   ├── chi_magnitude_surface.png
-│   ├── resonance_correlation_test.png
-│   └── RH_Geometric_Resonance_Paper_With_Figures.pdf
-│
-├── data/
-│   ├── chi_magnitude_sweep.csv
-│   └── chi_magnitude_surface.csv
-│
-├── RH_Geometric_Resonance_Paper_With_Figures.tex
-└── README.md
-```
-
----
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/Oggou/rh_resonance.git
-cd rh_resonance
-
-# Create virtual environment (recommended)
-python -m venv RH
-source RH/bin/activate   # macOS/Linux
-RH\Scripts\activate      # Windows PowerShell
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
----
-
-## 📊 Reproducing Results
-
-Run the automated figure generation:
-
-```bash
-cd src
-python generate_all_figures.py
-```
-
-This will:
-
-1. Sweep χ(s) across σ and t values  
-2. Generate CSV datasets (`chi_magnitude_sweep.csv`)  
-3. Produce all resonance and geometric plots in `/figures`
-
-All computations use **mpmath** arbitrary precision (up to 800 digits).
-
----
-
-## 📈 Core Results
-
-- The resonance condition 
 |χ(s)| = 1 ⇔ Re(s) = 1/2
 
-  holds numerically to machine precision.
+---
 
-- The base-(½i) representation defines a **logarithmic spiral lattice**, rotating 90° and scaling by ½ per iteration. ζ(s) achieves alignment only along the critical line.
+## 📊 Key Results
 
-- This provides a **computationally verifiable, geometric restatement of RH**.
+### 1. Analytic Resonance Structure
+![Analytic resonance structure of χ(s)](chi_magnitude_heatmap.png)  
+The equilibrium |χ(s)| = 1 occurs exactly at Re(s) = 1/2.
 
 ---
 
-## 📚 Citation
-
-```
-James P. Chase,
-"A Geometric and Frequency-Domain Restatement of the Riemann Hypothesis",
-Preprint, 2025.
-```
+### 2. Resonance Crossing
+![Resonance crossing curves of |χ(s)|](chi_magnitude_resonance.png)  
+Each line crosses |χ| = 1 at σ = 1/2, marking the equilibrium condition.
 
 ---
 
-## 🧮 Dependencies
+### 3. 3D Resonance Surface
+![3D surface of |χ(s)| and log10 deviation](chi_magnitude_surface.png)  
+The critical line forms a vertical resonance trench.
 
-All scripts depend on the following Python packages:
+---
 
-```
-mpmath
-numpy
-matplotlib
-scipy
-```
+### 4. Base–(1/2)i Spiral Geometry
+![Spiral structure of base-(1/2)i](base_half_i_spiral.png)  
+Each multiplication by b = (1/2)i rotates by 90° and shrinks by one-half, forming a decaying orthogonal spiral.
 
-Install automatically with:
+---
+
+### 5. Correlation Test
+![Correlation between |χ(s)|−1 and base-(2i) digit counts](resonance_correlation_test.png)  
+The correlation collapses to zero along Re(s) = 1/2.
+
+---
+
+## 💾 Reproducibility
+All scripts to generate figures and CSVs are in the `/src` directory.  
+Run the following to regenerate all results:
 
 ```bash
-pip install -r requirements.txt
-```
+python run_all_figures.py
