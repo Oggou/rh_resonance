@@ -58,8 +58,54 @@ The correlation collapses to zero along Re(s) = 1/2.
 ---
 
 ## 💾 Reproducibility
+```bash
+git clone https://github.com/Oggou/rh_resonance.git
+cd rh_resonance
+
+# Create virtual environment (recommended)
+python -m venv RH
+source RH/bin/activate   # macOS/Linux
+RH\Scripts\activate      # Windows PowerShell
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+---
+
 All scripts to generate figures and CSVs are in the `/src` directory.  
 Run the following to regenerate all results:
 
 ```bash
-python run_all_figures.py
+python 0_generate_all_figures.py
+```
+This will:
+
+1. Sweep χ(s) across σ and t values  
+2. Generate CSV datasets (`chi_magnitude_sweep.csv`)  
+3. Produce all resonance and geometric plots in `/figures`
+
+All computations use **mpmath** arbitrary precision (up to 800 digits).
+
+---
+
+## 📈 Core Results
+
+- The resonance condition 
+|χ(s)| = 1 ⇔ Re(s) = 1/2
+
+  holds numerically to machine precision.
+
+- The base-(½i) representation defines a **logarithmic spiral lattice**, rotating 90° and scaling by ½ per iteration. ζ(s) achieves alignment only along the critical line.
+
+- This provides a **computationally verifiable, geometric restatement of RH**.
+
+---
+
+## 📚 Citation
+
+```
+James P. Chase,
+"A Geometric and Frequency-Domain Restatement of the Riemann Hypothesis",
+Preprint, 2025.
+```
