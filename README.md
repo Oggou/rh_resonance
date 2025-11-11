@@ -86,6 +86,7 @@ This will:
 3. Produce all resonance and geometric plots in `/figures`
 
 All computations use **mpmath** arbitrary precision (up to 800 digits).
+Just exit out of the plot to continue the script.
 
 ---
 
